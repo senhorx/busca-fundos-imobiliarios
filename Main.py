@@ -54,5 +54,5 @@ while (total_percorrido/10) <quantidade_paginas:
         print("Total de paginas percorridas: "+str(total_percorrido))
         total_percorrido += 1
 
-print(len(result))
+InserirArquivo(result)
 
