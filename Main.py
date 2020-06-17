@@ -16,7 +16,7 @@ def tansformaString(result):
 
 r = requests.get("http://fnet.bmfbovespa.com.br/fnet/publico/pesquisarGerenciadorDocumentosDados?d={}&s={}&l=10&o%5B0%5D%5BdataEntrega%5D=desc&tipoFundo=1&idCategoriaDocumento=6&idTipoDocumento=45&idEspecieDocumento=0&_=1592263465886".format(str(index_request),str(dados_recebidos)))
 print(r.encoding)
-#quantidade_paginas = pagina['recordsTotal']
+#quantidade_paginas = 10*pagina['recordsTotal']
 #Se quiser o limite total de empresas, descomente a linha acima
 quantidade_paginas = 40 #Aqui coloca um limite para a quantidade de empresas
 
