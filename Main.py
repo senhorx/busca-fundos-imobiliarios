@@ -18,9 +18,9 @@ r = requests.get("http://fnet.bmfbovespa.com.br/fnet/publico/pesquisarGerenciado
 print(r.encoding)
 #quantidade_paginas = 10*pagina['recordsTotal']
 #Se quiser o limite total de empresas, descomente a linha acima
-quantidade_paginas = 40 #Aqui coloca um limite para a quantidade de empresas
+quantidade_paginas = 4 #Aqui coloca um limite para a quantidade de empresas
 
-while total_percorrido <quantidade_paginas:
+while (total_percorrido/10) <quantidade_paginas:
     if total_percorrido!=0 and total_percorrido%10 == 0:
         dados_recebidos += 10
         index_request += 1
@@ -54,8 +54,5 @@ while total_percorrido <quantidade_paginas:
         print("Total de paginas percorridas: "+str(total_percorrido))
         total_percorrido += 1
 
-print("\n")
-InserirArquivo(result)
-for r in result:
-    print(str(r))
+print(len(result))
 
